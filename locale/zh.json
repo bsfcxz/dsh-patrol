@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Patrol 自动技能",
+    "description": "当请求涉及 Patrol、Flutter E2E 或 UI 测试时，自动加载 Patrol 官方 Agent Skills（安装、编写测试、测试架构）。"
+  }
+}

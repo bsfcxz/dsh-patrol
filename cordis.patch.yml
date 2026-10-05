@@ -1,0 +1,12 @@
+# Register the Patrol auto-invocation plugin.
+#
+# When a step's direct user input asks for Patrol / Flutter E2E / UI testing,
+# the plugin loads the matching official Patrol skill and splices its body into
+# that same step, so the model receives the authoring rules without first
+# calling the `skill` tool.
+#
+# Toggle in Settings -> Plugins. Disabling this bundle stops the automatic
+# injection; the `skill` tool and the `/patrol-write-test` gesture keep working.
+- insert:
+    - id: patrol-auto
+      name: 'dsh-patrol'

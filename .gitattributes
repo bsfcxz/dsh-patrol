@@ -1,0 +1,27 @@
+# Normalize line endings so the repository stays consistent across platforms.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF for compatibility.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets are never converted.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+
+# Keep the SVG icon as text so diffs stay readable.
+*.svg text eol=lf
+
+# Generated or vendored content is excluded from language statistics.
+package-lock.json linguist-generated=true
+pnpm-lock.yaml linguist-generated=true
+
+# The bundled Patrol skills are third-party vendored content (Apache-2.0,
+# © LeanCode), not this project's source. Marking them vendored keeps the
+# repository reported as the JavaScript plugin it actually is.
+skills/** linguist-vendored=true linguist-generated=true
+skills/**/*.md linguist-detectable=false

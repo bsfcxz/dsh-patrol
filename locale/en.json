@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Patrol Auto Skills",
+    "description": "Automatically loads the official Patrol agent skills (setup, write-test, test-architecture) whenever a request mentions Patrol, Flutter E2E, or UI testing."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "dsh-patrol",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 插件：当请求涉及 Patrol / Flutter E2E / UI 测试时，自动加载 Patrol 官方 Agent Skills。",
+  "type": "module",
+  "displayName": "Patrol 自动技能",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "dsh-patrol contributors",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "patrol",
+    "flutter",
+    "e2e",
+    "ui-testing",
+    "integration-test",
+    "skill"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leancodepl/patrol.git"
+  },
+  "homepage": "https://patrol.leancode.co",
+  "bugs": {
+    "url": "https://github.com/leancodepl/patrol/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node tests/test-trigger.mjs && node tests/test-plugin.mjs && node tests/test-live.mjs",
+    "test:trigger": "node tests/test-trigger.mjs",
+    "test:plugin": "node tests/test-plugin.mjs",
+    "test:live": "node tests/test-live.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./trigger": "./trigger.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "trigger.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "skills",
+    "tests",
+    "README.md",
+    "THIRD-PARTY-NOTICES.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
